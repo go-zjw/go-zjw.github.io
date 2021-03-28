@@ -1,12 +1,10 @@
----
-title: hexo+GitHub 搭建个人博客
----
+#hexo+GitHub Pages搭建个人博客
   现在市面上的博客很多，如CSDN，博客园，简书等平台，可以直接在上面发表，用户交互做的好，写的文章百度也能搜索的到。缺点是比较不自由，会受到平台的各种限制和恶心的广告。
 
   而自己购买域名和服务器，搭建博客的成本实在是太高了，不光是说这些购买成本，单单是花力气去自己搭这么一个网站，还要定期的维护它，对于我们大多数人来说，实在是没有这样的精力和时间。直接在GitHub Pages平台上托管我们的博客。这样就可以安心的来写作，又不需要定期维护，而且hexo作为一个快速简洁的博客框架，用它来搭建博客真的非常容易。
 
-# hexo搭建
-## hexo简介
+## hexo搭建
+### hexo简介
 hexo是一款基于Node.js的静态博客框架，依赖少易于安装使用，可以方便的生成静态网页托管在GitHub和Coding上，是搭建博客的首选框架。大家可以进入hexo官网进行详细查看，因为Hexo的创建者是台湾人，对中文的支持很友好，可以选择中文进行查看。
 ## 安装Git
 Git是目前世界上最先进的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。也就是用来管理你的hexo博客文章，上传到GitHub的工具。Git非常强大，我觉得建议每个人都去了解一下。廖雪峰老师的Git教程写的非常好，大家可以了解一下。 [git教程]: https://www.liaoxuefeng.com/wiki/896043488029600
@@ -19,7 +17,7 @@ sudo apt-get install git
 ``` 
 安装好后，用git --version 来查看一下版本
 
-## 安装Node.js
+### 安装Node.js
 Hexo是基于Node.js编写的，所以需要安装一下Node.js和里面的npm工具。
 
 windows：Node.js选择LTS版本就行了。
@@ -40,7 +38,7 @@ npm -v
 检查一下有没有安装成功
 
 
-## 安装hexo
+### 安装hexo
 前面git和Node.js安装好后，就可以安装hexo了，你可以先创建一个文件夹blog，然后命令行cd（cd不行的用cd /d）到这个文件夹下（或者在这个文件夹下直接右键git bash打开）。
 
 输入命令
@@ -79,7 +77,7 @@ hexo server
 
 命令行使用ctrl+c可以把服务关掉。
 
-## GitHub创建个人仓库
+### GitHub创建个人仓库
 首先，你先要有一个GitHub账户，去注册一个吧。
 
 注册完登录后，在GitHub.com中看到一个New repository，新建仓库
@@ -92,7 +90,7 @@ hexo server
 
 点击create repository。
 
-## 生成SSH添加到GitHub
+### 生成SSH添加到GitHub
 回到你的git bash中，
 ``` bash
 git config --global user.name "yourname"
@@ -124,7 +122,7 @@ ssh，简单来讲，就是一个秘钥，其中，id_rsa是你这台电脑的�
 ``` bash
 ssh -T git@github.com
 ```
-## 将hexo部署到GitHub
+### 将hexo部署到GitHub
 这一步，我们就可以将hexo和GitHub关联起来，也就是将hexo生成的文章部署到GitHub上，打开站点配置文件 _config.yml，翻到最后，修改为
 ``` bash
 deploy:
@@ -151,7 +149,7 @@ hexo deploy 部署文件到github，可以用hexo d缩写
 过一会儿就可以在http://yourname.github.io 这个网站看到你的博客了！！
 
 
-## 设置个人域名
+### 设置个人域名
 现在你的个人网站的地址是 yourname.github.io，如果觉得这个网址逼格不太够，这就需要你设置个人域名了。但是需要花钱。
 
 注册一个阿里云账户,在阿里云上买一个域名，我买的是 fangzh.top，各个后缀的价格不太一样，比如最广泛的.com就比较贵，看个人喜好咯。
@@ -177,7 +175,7 @@ hexo deploy 部署文件到github，可以用hexo d缩写
 
 
 
-## 发布博客
+### 发布博客
 在git bash中，输入
 ``` bash
 hexo clean
